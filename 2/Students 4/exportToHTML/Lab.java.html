@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>Lab.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080; font-style: italic;}
+.s1 { color: #000000;}
+.s2 { color: #000080; font-weight: bold;}
+.s3 { color: #008000; font-weight: bold;}
+.s4 { color: #0000ff;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Lab.java</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+well this is about this fictional lab 
+we are going to get the date 
+and we are going to know how much people have worked 
+and at the end we are going to know what level is this lab from 0 to 100 
+@author Marcela 
+@version 1.00 
+ */</span>
+<span class="s2">public class </span>Lab {
+    <span class="s2">private </span>Students[] studentsS;
+    <span class="s2">private int </span>avg;
+    <span class="s2">private </span>String day;
+    <span class="s2">private int </span>capacity;
+    <span class="s2">private int </span>currentSize;
+
+    <span class="s2">public </span>Lab(<span class="s2">int </span>cap, String d) {
+        <span class="s2">this</span>.capacity=cap;
+        <span class="s2">this</span>.day=d;
+        studentsS = <span class="s2">new </span>Students[capacity];
+    }
+
+    <span class="s2">public void </span>enrollStudent(Students std) {
+        <span class="s2">if </span>(currentSize &lt; capacity) {
+            studentsS[currentSize] = std;
+            currentSize++;
+            }
+        <span class="s2">else </span>{
+            System.out.println(<span class="s3">&quot;Lab is full!!!&quot;</span>);
+        }
+    }
+    <span class="s0">/* 
+    its going to print all the info about todays students 
+     */</span>
+    <span class="s2">public void </span>print() {
+        <span class="s2">int </span>x;
+        <span class="s2">for</span>(x=<span class="s4">0</span>;x&lt;currentSize;x++)
+        {
+            System.out.println(<span class="s3">&quot;id : &quot;</span>+studentsS[x].getId());
+            System.out.println(<span class="s3">&quot;the name : &quot;</span>+studentsS[x].getFName()+<span class="s3">&quot; &quot;</span>+studentsS[x].getSName());
+            System.out.println(<span class="s3">&quot;the grade : &quot;</span>+studentsS[x].getGrade());
+        }
+        System.out.println(<span class="s3">&quot;today is &quot;</span>+day+<span class="s3">&quot; and average score was: &quot;</span>+avg);
+    }
+    <span class="s0">/* 
+    @return studentsS the list of ppl who study and learned something today at the lab 
+    */</span>
+    <span class="s2">public </span>Students[] getStudents() {
+       <span class="s2">return </span>studentsS;
+    }
+    <span class="s0">/* 
+    @param studentsS it will provide info about the todays list 
+     */</span>
+    <span class="s2">public void </span>setStudents(Students[] students) {
+        <span class="s2">this</span>.studentsS=students;
+    }
+    <span class="s0">/* 
+    @return avg it will provide info about they efficiency of the class 
+    */</span>
+    <span class="s2">public int </span>getAvg() {
+        <span class="s2">return </span>avg;
+    }
+    <span class="s0">/* 
+        this  method will calculate the hard work of my students in this day ! 
+     */</span>
+    <span class="s2">public void </span>calculateAvg() {
+        <span class="s2">int </span>x;
+        <span class="s2">int </span>total=<span class="s4">0</span>;
+        <span class="s2">for</span>(x=<span class="s4">0</span>;x&lt;currentSize;x++)
+        {
+            total+=studentsS[x].getGrade();
+        }
+        <span class="s2">this</span>.avg=total/(currentSize);
+    }
+  <span class="s0">/* 
+  @return day it will tell us in which specific day the lab was holed 
+   */</span>
+    <span class="s2">public </span>String getDay() {
+        <span class="s2">return </span>day;
+    }
+    <span class="s0">/* 
+    @param day it will give us info about day field 
+     */</span>
+    <span class="s2">public void </span>setDay(String day) {
+        <span class="s2">this</span>.day=day;
+    }
+    <span class="s0">/* 
+    @return capacity the maximum ppl who could be in the lab  :) 
+     */</span>
+    <span class="s2">public int </span>getCapacity() {
+        <span class="s2">return </span>capacity;
+    }
+    <span class="s0">/* 
+    @param capacity it will provide info about the maximum 
+     */</span>
+    <span class="s2">public void </span>setCapacity(<span class="s2">int </span>capacity) {
+        <span class="s2">this</span>.capacity=capacity;
+    }
+}
+</pre>
+</body>
+</html>

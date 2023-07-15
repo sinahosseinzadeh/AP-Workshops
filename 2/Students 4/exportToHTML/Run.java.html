@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Run.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000080; font-weight: bold;}
+.s1 { color: #000000;}
+.s2 { color: #008000; font-weight: bold;}
+.s3 { color: #0000ff;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Run.java</font>
+</center></td></tr></table>
+<pre><span class="s0">public class </span>Run
+{
+    <span class="s0">public static void </span>main (String args[])
+    {
+        Students std1 = <span class="s0">new </span>Students(<span class="s2">&quot;ehsan&quot;</span>,<span class="s2">&quot;kamali&quot;</span>,<span class="s3">9831011</span>,<span class="s3">12</span>);
+        Students std2 = <span class="s0">new </span>Students(<span class="s2">&quot;reza&quot;</span>,<span class="s2">&quot;Jahani&quot;</span>,<span class="s3">9831078</span>,<span class="s3">6</span>);
+        std2.setGrade(<span class="s3">16</span>);
+        Lab first = <span class="s0">new </span>Lab (<span class="s3">5</span>,<span class="s2">&quot;sunday&quot;</span>);
+        first.enrollStudent(std1);
+        first.enrollStudent(std2);
+        first.calculateAvg();
+        first.print();
+    }
+}
+</pre>
+</body>
+</html>

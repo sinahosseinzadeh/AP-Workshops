@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>Students.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080; font-style: italic;}
+.s1 { color: #000000;}
+.s2 { color: #000080; font-weight: bold;}
+.s3 { color: #008000; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Students.java</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+@author morteza 
+this is the program to show the students full information 
+ 
+ */</span>
+<span class="s2">public class </span>Students {
+    <span class="s2">private </span>String firstName;
+    <span class="s2">private </span>String secondName;
+    <span class="s2">private int </span>id;
+    <span class="s2">private int </span>grade;
+    <span class="s0">/* 
+        @param fName tell us the first name 
+        @param sName tell us the second name 
+        @param idCard tell us their id 
+        @param level tell us which grade their in 
+     */</span>
+    <span class="s2">public </span>Students(String fName,String sName,<span class="s2">int </span>idCard,<span class="s2">int </span>level)
+    {
+        <span class="s2">this</span>.firstName=fName;
+        <span class="s2">this</span>.secondName=sName;
+        <span class="s2">this</span>.id=idCard;
+        <span class="s2">this</span>.grade=level;
+
+    }
+    <span class="s0">// @return firstName field</span>
+    <span class="s2">public </span>String getFName()
+    {
+        <span class="s2">return </span>firstName;
+    }
+    <span class="s0">//return secondName field</span>
+    <span class="s2">public </span>String getSName()
+    {
+        <span class="s2">return </span>secondName;
+
+    }
+    <span class="s0">// @return id field</span>
+    <span class="s2">public int </span>getId()
+    {
+        <span class="s2">return </span>id;
+    }
+    <span class="s0">// @return grade field</span>
+    <span class="s2">public int </span>getGrade()
+    {
+        <span class="s2">return </span>grade;
+    }
+    <span class="s0">// @param firstName this is the new name</span>
+    <span class="s2">public void </span>setFName(String fname)
+    {
+        <span class="s2">this</span>.firstName=fname;
+    }
+    <span class="s0">// @param secondName this is the changed last name</span>
+    <span class="s2">public void </span>setSName(String sname)
+    {
+        <span class="s2">this</span>.secondName=sname;
+
+    }
+    <span class="s0">// @param id this is the new id</span>
+    <span class="s2">public void </span>setId(<span class="s2">int </span>idCard)
+    {
+        <span class="s2">this</span>.id=idCard;
+    }
+    <span class="s0">// @param grade this is the new grade</span>
+    <span class="s2">public void </span>setGrade(<span class="s2">int </span>grade)
+    {
+        <span class="s2">this</span>.grade=grade;
+    }
+    <span class="s2">public void </span>Print()
+    {
+        System.out.println(<span class="s3">&quot;id card :&quot;</span>+id);
+        System.out.println(<span class="s3">&quot;name : &quot;</span>+firstName +<span class="s3">&quot; &quot;</span>+secondName+<span class="s3">&quot; grade :&quot;</span>+grade);
+    }
+}
+</pre>
+</body>
+</html>
